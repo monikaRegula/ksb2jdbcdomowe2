@@ -1,0 +1,30 @@
+<div mat-dialog-title>
+  <h1>News Form</h1>
+</div>
+<form [formGroup]="newsForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Id</mat-label>
+        <input matInput type="text" placeholder="4" formControlName="id">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Title</mat-label>
+        <input matInput type="text" placeholder="Honda" formControlName="title">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Summary</mat-label>
+        <input matInput type="text" placeholder="Civic" formControlName="summary">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Image</mat-label>
+        <input matInput type="Red" placeholder="4" formControlName="image">
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions class="action">
+    <button mat-raised-button type="button" mat-dialog-close="false">Cancel</button>
+    <button mat-raised-button color="primary" type="submit">{{data ? 'Update' : 'Save'}}</button>
+  </div>
+</form>
+

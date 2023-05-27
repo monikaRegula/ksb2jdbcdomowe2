@@ -1,6 +1,6 @@
 export class News{
   id?: number;
-  tile?:string;
-  summary?:string;
-  image?:string;
+  title?: string;
+  summary?: string;
+  image?: string;
 }
